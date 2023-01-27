@@ -1,0 +1,10 @@
+{% if cookiecutter.dependencies_install_type == "git submodule" %}
+ [submodule "hello-world"]
+        path = {{ cookiecutter.project_name }}/hello-world
+        url = https://github.com/dong-toggle-ai/hello-world
+        branch = main
+  [submodule "ds-abc"]
+        path = {{ cookiecutter.project_name }}/ds-abc
+        url = https://github.com/dong-toggle-ai/ds-abc
+        branch = main
+{% endif %}
