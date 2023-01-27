@@ -3,5 +3,6 @@
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "author_name": "Your name (or your organization/company/team)",
   "author_email": "Your email (or your organization/company/team)",
-  "project_short_description": "A short description of the project."
+  "project_short_description": "A short description of the project.",
+  "dependencies_install_type": ["setuptools", "git submodule"]
 }

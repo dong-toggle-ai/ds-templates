@@ -1,1 +1,4 @@
+{% if cookiecutter.dependencies_install_type == "setuptools" %}
 git+https://github.com/dong-toggle-ai/hello-world@main#egg=hello-world
+git+https://github.com/dong-toggle-ai/ds-abc@main
+{% endif %}
