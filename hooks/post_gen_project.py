@@ -26,6 +26,10 @@ def submodules():
 
 
 def cmd():
+    os.system("python3 -m venv ./venv")
+    os.system("source ./venv/bin/activate")
+    os.system("pip install -r requirements.txt")
+
     os.system("pre-commit install")
 
 
