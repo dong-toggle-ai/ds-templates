@@ -27,11 +27,11 @@ def submodules():
 def cmd():
 
     python_version = "{{ cookiecutter.python_version }}"
-    os.system(f"{python_version} -m venv ./venv")
-    os.system("source ./venv/bin/activate")
-    os.system("pip install -r requirements.txt")
+    if os.system(f"python{python_version} -m venv ./venv") != 0:
+        os.system("source ./venv/bin/activate")
+        os.system("pip install -r requirements.txt")
 
-    os.system("pre-commit install")
+        os.system("pre-commit install")
 
 
 if __name__ == "__main__":
