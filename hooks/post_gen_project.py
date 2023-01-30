@@ -16,7 +16,6 @@ def main(args):
     os.system("git add hello-world")
     os.system('git commit -m "Added hello-world submodule"')
 
-
     # Add ds-abc as submodule
     os.system('git submodule add https://github.com/dong-toggle-ai/ds-abc')
     os.chdir("ds-abc")
@@ -32,4 +31,5 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     args = parser.parse_args()
 
-    main(args)
+    if "{{ cookiecutter.dependencies_install_type }}" == "git submodule":
+        main(args)
