@@ -3,25 +3,16 @@ import os
 
 def submodules():
     os.chdir("src")
-    # Add hello-world as submodule
-    os.system('git submodule add https://github.com/dong-toggle-ai/hello-world')
-    os.chdir("hello-world")
+
+    # Add ds-packages as submodule
+    os.system('git submodule add https://github.com/dong-toggle-ai/ds-packages')
+    os.chdir("ds-packages")
     os.system('git checkout main && echo main')
     os.chdir("..")
 
-    # The checkout might have left the hello-world dirty
-    os.system("git add hello-world")
-    os.system('git commit -m "Added hello-world submodule"')
-
-    # Add ds-abc as submodule
-    os.system('git submodule add https://github.com/dong-toggle-ai/ds-abc')
-    os.chdir("ds-abc")
-    os.system('git checkout main && echo main')
-    os.chdir("..")
-
-    # The checkout might have left the ds-abc dirty
-    os.system("git add ds-abc")
-    os.system('git commit -m "Added ds-abc submodule"')
+    # The checkout might have left the ds-packages dirty
+    os.system("git add ds-packages")
+    os.system('git commit -m "Added ds-packages submodule"')
 
 
 def cleanup():
