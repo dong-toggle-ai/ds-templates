@@ -32,11 +32,11 @@ pytest = "7.2.1"
 [tool.poetry.dependencies]
 python = "^3.8"
 
-{% if cookiecutter.dependencies_install_type == "setuptools" %}
-{% if cookiecutter.use_utils == "y" %}
+{% if cookiecutter.dependencies_install_type == "setuptools" -%}
+{% if cookiecutter.use_utils == "y" -%}
 utils = {git = "https://github.com/dong-toggle-ai/ds-packages", subdirectory = "utils"}
-{% endif %}
-{% if cookiecutter.use_calculator == "y" %}
+{% endif -%}
+{% if cookiecutter.use_calculator == "y" -%}
 utils = {git = "https://github.com/dong-toggle-ai/ds-packages", subdirectory = "calculator"}
-{% endif %}
-{% endif %}
+{% endif -%}
+{% endif -%}
