@@ -17,20 +17,20 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-[project.urls]
-"Homepage" = "https://github.com/pypa/sampleproject"
-"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+[tool.poetry]
+name = "{{ cookiecutter.project_name }}"
+version = "{{ cookiecutter.project_version }}"
+description = "{{ cookiecutter.project_short_description }}"
+authors = "{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"
+readme = "README.md"
 
-#[tool.poetry]
-#name = "{{ cookiecutter.project_name }}"
-#version = "0.1.0"
-#description = "{{ cookiecutter.project_short_description }}"
-#authors = "{{ cookiecutter.author_name }}"
-#readme = "README.md"
-#
-#[tool.poetry.dev-dependencies]
-#coverage = "7.0.1"
-#pre-commit = "3.0.0"
-#pytest = "7.2.1"
-#
-#[tool.poetry.dependencies]
+[tool.poetry.group.dev.dependencies]
+coverage = "7.0.1"
+pre-commit = "3.0.0"
+pytest = "7.2.1"
+
+[tool.poetry.dependencies]
+{% if cookiecutter.dependencies_install_type == "setuptools" %}
+{% if cookiecutter.use_utils == "y" %}git+https://github.com/dong-toggle-ai/ds-packages#subdirectory=utils{% endif %}
+{% if cookiecutter.use_calculator == "y" %}git+https://github.com/dong-toggle-ai/ds-packages#subdirectory=calculator{% endif %}
+{% endif %}

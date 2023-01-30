@@ -1,7 +1,0 @@
-pytest==7.2.1
-pre-commit==3.0.2
-
-{% if cookiecutter.dependencies_install_type == "setuptools" %}
-{% if cookiecutter.use_utils == "y" %}git+https://github.com/dong-toggle-ai/ds-packages#subdirectory=utils{% endif %}
-{% if cookiecutter.use_calculator == "y" %}git+https://github.com/dong-toggle-ai/ds-packages#subdirectory=calculator{% endif %}
-{% endif %}
