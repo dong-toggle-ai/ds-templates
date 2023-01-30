@@ -1,8 +1,6 @@
-import argparse
 import os
 
-
-def main(args):
+def submodules():
     os.system('git init')
 
     os.chdir("src")
@@ -27,9 +25,12 @@ def main(args):
     os.system('git commit -m "Added ds-abc submodule"')
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
-    args = parser.parse_args()
+def cmd():
+    os.system("pre-commit install")
 
+
+if __name__ == "__main__":
     if "{{ cookiecutter.dependencies_install_type }}" == "git submodule":
-        main(args)
+        submodules()
+
+    cmd()
