@@ -1,7 +1,7 @@
 import os
 
-def submodules():
 
+def submodules():
     os.chdir("src")
     # Add hello-world as submodule
     os.system('git submodule add https://github.com/dong-toggle-ai/hello-world')
@@ -24,8 +24,14 @@ def submodules():
     os.system('git commit -m "Added ds-abc submodule"')
 
 
-def cmd():
+def cleanup():
+    if "{{ cookiecutter.project_type }}" == "library":
+        files_excude = [".flake8", ".isort.cfg", ".pre-commit-config.yaml"]
+        for file in files_excude:
+            os.remove(file)
 
+
+def cmd():
     python_version = "{{ cookiecutter.python_version }}"
     if os.system(f"python{python_version} -m venv ./venv") == 0:
         os.system("./venv/bin/pip install -r requirements.txt")
@@ -41,4 +47,4 @@ if __name__ == "__main__":
     #     submodules()
     #
     # cmd()
-    pass
+    cleanup()
