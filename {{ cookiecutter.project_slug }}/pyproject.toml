@@ -10,7 +10,7 @@ authors = [
 ]
 description = "{{ cookiecutter.project_short_description }}"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -21,7 +21,7 @@ classifiers = [
 name = "{{ cookiecutter.project_name }}"
 version = "{{ cookiecutter.project_version }}"
 description = "{{ cookiecutter.project_short_description }}"
-authors = "{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"
+authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
 readme = "README.md"
 
 [tool.poetry.group.dev.dependencies]
@@ -30,7 +30,13 @@ pre-commit = "3.0.0"
 pytest = "7.2.1"
 
 [tool.poetry.dependencies]
+python = "^3.8"
+
 {% if cookiecutter.dependencies_install_type == "setuptools" %}
-{% if cookiecutter.use_utils == "y" %}git+https://github.com/dong-toggle-ai/ds-packages#subdirectory=utils{% endif %}
-{% if cookiecutter.use_calculator == "y" %}git+https://github.com/dong-toggle-ai/ds-packages#subdirectory=calculator{% endif %}
+{% if cookiecutter.use_utils == "y" %}
+utils = {git = "https://github.com/dong-toggle-ai/ds-packages", subdirectory = "utils"}
+{% endif %}
+{% if cookiecutter.use_calculator == "y" %}
+utils = {git = "https://github.com/dong-toggle-ai/ds-packages", subdirectory = "calculator"}
+{% endif %}
 {% endif %}
