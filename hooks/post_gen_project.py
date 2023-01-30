@@ -5,11 +5,12 @@ import os
 def main(args):
     os.system('git init')
 
+    os.chdir("src")
     # Add hello-world as submodule
     os.system('git submodule add https://github.com/dong-toggle-ai/hello-world')
-    os.chdir("src/hello-world")
+    os.chdir("hello-world")
     os.system('git checkout main && echo main')
-    os.chdir("../..")
+    os.chdir("..")
 
     # The checkout might have left the hello-world dirty
     os.system("git add hello-world")
@@ -20,7 +21,7 @@ def main(args):
     os.system('git submodule add https://github.com/dong-toggle-ai/ds-abc')
     os.chdir("src/ds-abc")
     os.system('git checkout main && echo main')
-    os.chdir("../..")
+    os.chdir("..")
 
     # The checkout might have left the ds-abc dirty
     os.system("git add ds-abc")
