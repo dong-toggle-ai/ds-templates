@@ -27,7 +27,7 @@ def submodules():
 def cmd():
 
     python_version = "{{ cookiecutter.python_version }}"
-    if os.system(f"python{python_version} -m venv ./venv") != 0:
+    if os.system(f"python{python_version} -m venv ./venv") == 0:
         os.system("source ./venv/bin/activate")
         os.system("pip install -r requirements.txt")
 
