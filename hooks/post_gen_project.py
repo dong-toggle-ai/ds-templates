@@ -1,7 +1,6 @@
 import os
 
 def submodules():
-    os.system('git init')
 
     os.chdir("src")
     # Add hello-world as submodule
@@ -26,7 +25,9 @@ def submodules():
 
 
 def cmd():
-    os.system("python3 -m venv ./venv")
+
+    python_version = "{{ cookiecutter.python_version }}"
+    os.system(f"{python_version} -m venv ./venv")
     os.system("source ./venv/bin/activate")
     os.system("pip install -r requirements.txt")
 
@@ -34,6 +35,8 @@ def cmd():
 
 
 if __name__ == "__main__":
+    os.system('git init')
+
     if "{{ cookiecutter.dependencies_install_type }}" == "git submodule":
         submodules()
 
