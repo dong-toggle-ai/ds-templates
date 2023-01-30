@@ -34,10 +34,11 @@ def cmd():
 
 
 if __name__ == "__main__":
-    os.system('git init')
-    os.system('git branch -m main')
-
-    if "{{ cookiecutter.dependencies_install_type }}" == "git submodule":
-        submodules()
-
-    cmd()
+    # os.system('git init')
+    # os.system('git branch -m main')
+    #
+    # if "{{ cookiecutter.dependencies_install_type }}" == "git submodule":
+    #     submodules()
+    #
+    # cmd()
+    pass
