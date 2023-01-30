@@ -19,7 +19,7 @@ def main(args):
 
     # Add ds-abc as submodule
     os.system('git submodule add https://github.com/dong-toggle-ai/ds-abc')
-    os.chdir("src/ds-abc")
+    os.chdir("ds-abc")
     os.system('git checkout main && echo main')
     os.chdir("..")
 
