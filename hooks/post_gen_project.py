@@ -2,7 +2,7 @@ import os
 
 
 def submodules():
-    os.chdir("src")
+    os.chdir("{{ cookiecutter.project_slug if cookiecutter.project_type == 'library' else '_'}}")
 
     # Add ds-packages as submodule
     os.system('git submodule add https://github.com/dong-toggle-ai/ds-packages')
