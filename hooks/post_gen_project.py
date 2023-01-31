@@ -23,6 +23,8 @@ def cleanup():
 
     for root, subdirs, files in os.walk("."):
         if root[root.rfind("/") + 1:] == "_":
+            for file in files:
+                os.remove(os.path.join(root, file))
             os.rmdir(root)
 
 
