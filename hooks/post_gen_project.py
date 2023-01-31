@@ -16,10 +16,11 @@ def submodules():
 
 
 def cleanup():
-    if "{{ cookiecutter.project_type }}" == "library":
-        files_excude = [".flake8", ".isort.cfg", ".pre-commit-config.yaml"]
-        for file in files_excude:
-            os.remove(file)
+    # if "{{ cookiecutter.project_type }}" == "library":
+    #     files_excude = [".flake8", ".isort.cfg", ".pre-commit-config.yaml"]
+    #     for file in files_excude:
+    #         os.remove(file)
+    pass
 
 
 def cmd():
