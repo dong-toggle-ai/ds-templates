@@ -21,13 +21,11 @@ def cleanup():
         for file in files_excude:
             os.remove(file)
 
-    for root, subdirs, files in os.walk(".", topdown=False):
+    import shutil
+    for root, subdirs, files in os.walk("."):
         if root[root.rfind("/") + 1:] == "_":
-            for f in files:
-                os.remove(os.path.join(root, f))
-            for d in subdirs:
-                os.rmdir(os.path.join(root, d))
-
+            print(f"Deleting... {root}")
+            shutil.rmtree(root)
 
 def cmd():
     python_version = "{{ cookiecutter.python_version }}"
