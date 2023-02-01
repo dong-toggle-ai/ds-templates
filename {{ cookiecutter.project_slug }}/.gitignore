@@ -133,3 +133,8 @@ dmypy.json
 
 # VSCode
 .vscode/
+
+# Data science local
+data/
+models/
+notebooks/
