@@ -26,6 +26,7 @@ readme = "README.md"
 coverage = "7.0.1"
 pre-commit = "3.0.0"
 pytest = "7.2.1"
+tox = "4.4.5"
 
 [tool.poetry.dependencies]
 python = "^{{ cookiecutter.python_version }}"
