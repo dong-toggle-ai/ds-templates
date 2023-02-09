@@ -10,11 +10,9 @@ authors = [
 ]
 description = "{{ cookiecutter.project_short_description }}"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">={{ cookiecutter.python_version }}"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
 ]
 
 [tool.poetry]
@@ -30,7 +28,7 @@ pre-commit = "3.0.0"
 pytest = "7.2.1"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^{{ cookiecutter.python_version }}"
 
 {% if cookiecutter.dependencies_install_type == "setuptools" -%}
 {% if cookiecutter.use_utils == "y" -%}
