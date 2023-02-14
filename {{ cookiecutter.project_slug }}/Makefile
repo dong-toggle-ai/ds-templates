@@ -5,7 +5,7 @@ init:
 install:
 	python3 -m venv ./venv
 	curl -sSL https://install.python-poetry.org | python3 -
-	/venv/bin/poetry install
+	${HOME}/.local/bin/poetry install
 	pre-commit install
 
 lint:
