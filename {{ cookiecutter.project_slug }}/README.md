@@ -1,7 +1,7 @@
 # The `{{ cookiecutter.project_name }}` Service
 
 ## Role of the service
-{{ cookiecutter.project_description }}
+{{ cookiecutter.project_short_description }}
 
 ### Architecture
 
