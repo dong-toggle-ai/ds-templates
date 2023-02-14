@@ -5,9 +5,9 @@ def submodules():
     os.chdir("{{ cookiecutter.project_slug if cookiecutter.project_type == 'library' else '_' }}")
 
     # Add ds-packages as submodule
-    os.system('git submodule add https://github.com/dong-toggle-ai/ds-packages')
+    os.system("git submodule add https://github.com/dong-toggle-ai/ds-packages")
     os.chdir("ds-packages")
-    os.system('git checkout main && echo main')
+    os.system("git checkout main && echo main")
     os.chdir("..")
 
     # The checkout might have left the ds-packages dirty
@@ -22,10 +22,12 @@ def cleanup():
             os.remove(file)
 
     import shutil
+
     for root, subdirs, files in os.walk("."):
-        if root[root.rfind("/") + 1:][0] == "_":
+        if root[root.rfind("/") + 1 :][0] == "_":
             print(f"Deleting... {root}")
             shutil.rmtree(root)
+
 
 def cmd():
     python_version = "{{ cookiecutter.python_version }}"
