@@ -30,12 +30,9 @@ tox = "4.4.5"
 
 [tool.poetry.dependencies]
 python = "^{{ cookiecutter.python_version }}"
-
-{% if cookiecutter.dependencies_install_type == "setuptools" -%}
 {% if cookiecutter.use_utils == "y" -%}
-utils = {git = "https://github.com/dong-toggle-ai/ds-packages", subdirectory = "utils"}
+utils = {git = "https://github.com/dong-toggle-ai/ds-packages", tag="2.0", subdirectory = "utils"}
 {% endif -%}
 {% if cookiecutter.use_calculator == "y" -%}
-calculator = {git = "https://github.com/dong-toggle-ai/ds-packages", subdirectory = "calculator"}
-{% endif -%}
+calculator = {git = "https://github.com/dong-toggle-ai/ds-packages", tag="2.0", subdirectory = "calculator"}
 {% endif -%}

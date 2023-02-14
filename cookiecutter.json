@@ -7,7 +7,6 @@
   "project_short_description": "A short description of the project.",
   "python_version": ["3.9","3.10","3.11"],
   "project_type": ["standard", "library", "datascience"],
-  "dependencies_install_type": ["setuptools", "git submodules"],
   "use_utils": "n",
   "use_calculator": "n"
 }
