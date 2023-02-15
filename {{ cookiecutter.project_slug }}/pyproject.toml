@@ -34,5 +34,5 @@ python = "^{{ cookiecutter.python_version }}"
 utils = {git = "https://github.com/dong-toggle-ai/ds-packages", tag="3.0", subdirectory = "utils"}
 {% endif -%}
 {% if cookiecutter.use_calculator == "y" -%}
-calculator = {git = "https://github.com/dong-toggle-ai/ds-packages", tag="3.0", subdirectory = "calculator"}
+calculator = {git = "https://github.com/dong-toggle-ai/ds-packages", tag="3.1", subdirectory = "calculator"}
 {% endif -%}
