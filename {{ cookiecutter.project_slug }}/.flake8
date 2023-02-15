@@ -1,2 +1,12 @@
 [flake8]
 ignore = E402,E501,F541,F841,W391,E203, W503
+exclude =
+    docs
+    docker
+    data
+    models
+    notebooks
+    __pycache__
+    venv
+    env
+    .env
