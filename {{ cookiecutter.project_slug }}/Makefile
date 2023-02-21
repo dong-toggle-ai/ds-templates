@@ -23,7 +23,7 @@ lint:
 
 test:
 	@echo "Running pytest..."
-	pytest
+	tox -p
 
 clean:
 	@echo "Cleaning up..."
