@@ -11,7 +11,6 @@ install:
 
 	@echo "Downloading poetry and install packages..."
 	curl -sSL https://install.python-poetry.org | python3 -
-	source ${VENV}/bin/active
 	${HOME}/.local/bin/poetry install
 
 
