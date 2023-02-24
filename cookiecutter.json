@@ -8,6 +8,6 @@
   "python_version": ["3.9","3.10","3.11"],
   "project_type": ["standard", "library", "datascience"],
   "use_docker": "n",
-  "use_utils": "n",
-  "use_calculator": "n"
+  "use_gcp_lib": "n",
+  "use_grpc_lib": "n"
 }
