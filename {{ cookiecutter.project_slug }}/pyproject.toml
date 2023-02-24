@@ -32,8 +32,8 @@ sphinx = "6.1.3"
 [tool.poetry.dependencies]
 python = "^{{ cookiecutter.python_version }}"
 {% if cookiecutter.use_gcp_lib == "y" -%}
-utils = {git = "https://github.com/toggleglobal/py-gcp", branch="main"}
+py-gcp = {git = "https://github.com/toggleglobal/py-gcp", branch="main"}
 {% endif -%}
 {% if cookiecutter.use_grpc_lib == "y" -%}
-calculator = {git = "https://github.com/toggleglobal/py-grpc", branch="main"}
+py-grpc = {git = "https://github.com/toggleglobal/py-grpc", branch="main"}
 {% endif -%}
