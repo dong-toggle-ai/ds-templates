@@ -2,7 +2,7 @@ ARG PYTHON_VERSION
 FROM python:${PYTHON_VERSION}
 LABEL maintainer="Toggle <deploy@toggle.ai>"
 
-ENV SERVICE_NAME {{ cookiecutter.project_name }}
+ENV SERVICE_NAME {{ cookiecutter.project_slug }}
 ENV PYTHONUNBUFFERED 1
 
 # CREATE UNPRIVILEGED USER AND SET PERMISSIONS
